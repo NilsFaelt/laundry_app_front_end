@@ -1,4 +1,4 @@
-import { PaginationInfo } from "../../../../types/paginationTypes";
+import { PaginationInfo } from "../../../../../types/paginationTypes";
 
 export const calcNrsToShowInPagination = (
   page: number,
