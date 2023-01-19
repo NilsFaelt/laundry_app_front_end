@@ -1,8 +1,9 @@
 import { PaginationInfo } from "../../../../../types/paginationTypes";
+import { PaginationInfoMail } from "../Pagination";
 
 export const calcNrsToShowInPagination = (
   page: number,
-  paginatedArray: PaginationInfo
+  paginatedArray: PaginationInfoMail
 ): number[] => {
   let arrayToRender = [];
 
