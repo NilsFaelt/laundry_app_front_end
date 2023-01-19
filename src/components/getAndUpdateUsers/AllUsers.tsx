@@ -44,7 +44,7 @@ const AllUsers = () => {
         ) : null}
         <styles.Input
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setInput(e.target.value)
+            setInput(e.target.value.toLocaleLowerCase())
           }
           value={input}
         ></styles.Input>
