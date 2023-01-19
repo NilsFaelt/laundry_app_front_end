@@ -13,6 +13,8 @@ export const searchUser = (
     React.SetStateAction<UserTypeWithNestedAdress[] | null>
   >
 ) => {
-  const data = userData?.data?.filter((user) => user.email.includes(input));
+  const data = userData?.data?.filter((user) =>
+    user.email.toLocaleLowerCase().includes(input.toLocaleLowerCase())
+  );
   if (data && input !== "") setFilteredUsers(data);
 };
