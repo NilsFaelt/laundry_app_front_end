@@ -7,9 +7,7 @@ interface Data {
 }
 export const deleteUser = async (id: string): Promise<Data> => {
   try {
-    const data = await axios.delete(
-      `http://${apiConfig.url}:${apiConfig.port}/users/${id}`
-    );
+    const data = await axios.delete(`${apiConfig.url}/users/${id}`);
 
     return data;
   } catch (err: any) {

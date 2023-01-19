@@ -9,7 +9,7 @@ export async function updateUser(
 
   try {
     const user = await axios.put(
-      `http://${apiConfig.url}:${apiConfig.port}/users/${createUserInfo.id}`,
+      `${apiConfig.url}/users/${createUserInfo.id}`,
       createUserInfo
     );
     const returnData = user.data.user;

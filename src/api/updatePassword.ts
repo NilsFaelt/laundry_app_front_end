@@ -20,7 +20,7 @@ export async function updatePassword(
 ): Promise<ReturnData> {
   try {
     const data = await axios.put(
-      `http://${apiConfig.url}:${apiConfig.port}/users/updateuserpassword/${id}`,
+      `${apiConfig.url}/users/updateuserpassword/${id}`,
       credentials
     );
 

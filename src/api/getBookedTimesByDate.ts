@@ -4,10 +4,9 @@ import { apiConfig } from "./apiConifig";
 
 export const getBookedTimesByDate = async (date: string) => {
   try {
-    const bookedTimes = await axios.post(
-      `http://${apiConfig.url}:${apiConfig.port}/booked/byDay`,
-      { dateForBooking: date }
-    );
+    const bookedTimes = await axios.post(`${apiConfig.url}/booked/byDay`, {
+      dateForBooking: date,
+    });
 
     return bookedTimes.data.bookings;
   } catch (err: any) {

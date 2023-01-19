@@ -4,10 +4,7 @@ import { apiConfig } from "./apiConifig";
 
 export async function createUser(createUserInfo: UserType): Promise<UserType> {
   try {
-    const user = await axios.post(
-      `http://${apiConfig.url}:${apiConfig.port}/users`,
-      createUserInfo
-    );
+    const user = await axios.post(`${apiConfig.url}/users`, createUserInfo);
     const returnData = user.data.user;
     console.log(returnData, "user");
     return returnData;

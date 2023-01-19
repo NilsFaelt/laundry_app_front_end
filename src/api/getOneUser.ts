@@ -5,9 +5,7 @@ import { apiConfig } from "./apiConifig";
 export const getOneUser = async (email: string) => {
   console.log(email);
   try {
-    const data = await axios.get(
-      `http://${apiConfig.url}:${apiConfig.port}/users/getOne/${email}`
-    );
+    const data = await axios.get(`${apiConfig.url}/users/getOne/${email}`);
 
     return data;
   } catch (err: any) {

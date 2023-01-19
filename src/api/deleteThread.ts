@@ -8,7 +8,7 @@ interface Data {
 export const deleteThread = async (thread: string): Promise<Data> => {
   try {
     const data = await axios.delete(
-      `http://${apiConfig.url}:${apiConfig.port}/thread/deleteThread/${thread}`
+      `${apiConfig.url}/thread/deleteThread/${thread}`
     );
 
     return data.data;

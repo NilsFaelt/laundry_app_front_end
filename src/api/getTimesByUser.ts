@@ -6,10 +6,9 @@ export const getBookedTimesByUser = async (
   userEmail: string
 ): Promise<BookedLaundrytimes[] | null> => {
   try {
-    const bookedTimes = await axios.post(
-      `http://${apiConfig.url}:${apiConfig.port}/booked/byUser`,
-      { email: userEmail }
-    );
+    const bookedTimes = await axios.post(`${apiConfig.url}/booked/byUser`, {
+      email: userEmail,
+    });
     return bookedTimes.data.bookings;
   } catch (err: any) {
     throw { msg: err.message, stack: err.stack };

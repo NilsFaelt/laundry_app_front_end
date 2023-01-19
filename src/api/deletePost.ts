@@ -7,9 +7,7 @@ interface Data {
 
 export const deletePost = async (id: string): Promise<Data> => {
   try {
-    const data = await axios.delete(
-      `http://${apiConfig.url}:${apiConfig.port}/posts/deletePost/${id}`
-    );
+    const data = await axios.delete(`${apiConfig.url}/posts/deletePost/${id}`);
 
     return data.data;
   } catch (err: any) {

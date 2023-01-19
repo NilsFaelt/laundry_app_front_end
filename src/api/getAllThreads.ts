@@ -5,9 +5,7 @@ import { apiConfig } from "./apiConifig";
 
 export const getAllThreads = async (): Promise<ThreadType[] | null> => {
   try {
-    const data = await axios(
-      `http://${apiConfig.url}:${apiConfig.port}/thread`
-    );
+    const data = await axios(`${apiConfig.url}/thread`);
     return data.data.threads;
   } catch (err: any) {
     throw { msg: err.message, stack: err.stack };

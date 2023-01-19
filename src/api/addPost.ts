@@ -4,10 +4,7 @@ import { apiConfig } from "./apiConifig";
 
 export const addPost = async (post: Post): Promise<Post> => {
   try {
-    const data = await axios.post(
-      `http://${apiConfig.url}:${apiConfig.port}/posts/addPost`,
-      post
-    );
+    const data = await axios.post(`${apiConfig.url}/posts/addPost`, post);
     return data.data.post;
   } catch (err: any) {
     throw { msg: err.message, stack: err.stack };

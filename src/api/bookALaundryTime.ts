@@ -13,10 +13,9 @@ interface BookingInfo {
 
 export const bookALaundryTime = async (bookingInfo: BookingInfo) => {
   try {
-    const bookedTime = await axios.post(
-      `http://${apiConfig.url}:${apiConfig.port}/booked`,
-      { bookingInfo }
-    );
+    const bookedTime = await axios.post(`${apiConfig.url}/booked`, {
+      bookingInfo,
+    });
 
     return bookedTime.data;
   } catch (err: any) {

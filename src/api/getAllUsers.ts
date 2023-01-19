@@ -6,9 +6,7 @@ export interface UsersData {
 }
 export const getAllUsers = async (): Promise<UsersData> => {
   try {
-    const allUsers = await axios(
-      `http://${apiConfig.url}:${apiConfig.port}/users`
-    );
+    const allUsers = await axios(`${apiConfig.url}/users`);
     console.log(allUsers.data);
     return allUsers.data;
   } catch (err: unknown) {

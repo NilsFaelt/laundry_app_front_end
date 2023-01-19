@@ -5,7 +5,7 @@ import { apiConfig } from "./apiConifig";
 export const addThread = async (threadInfo: ThreadType): Promise<void> => {
   try {
     const postedThread = await axios.post(
-      `http://${apiConfig.url}:${apiConfig.port}/thread/addNew`,
+      `${apiConfig.url}/thread/addNew`,
       threadInfo
     );
   } catch (err: any) {
