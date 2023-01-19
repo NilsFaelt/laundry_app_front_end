@@ -86,7 +86,7 @@ export const Input = styled(globalStyles.Input)`
   border-radius: 5px;
   border: 1px solid black;
   padding: 1px;
-  font-size: 14px;
+  font-size: 16px;
 `;
 
 export const Btn = styled(globalStyles.MainBtn)`

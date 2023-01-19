@@ -37,7 +37,7 @@ export const Input = styled.input`
   width: 90%;
   height: 25px;
   font-family: "Montserrat", sans-serif;
-  font-size: calc(12px + 0.2vw);
+  font-size: 16px;
 `;
 
 export const MainBtn = styled.button`

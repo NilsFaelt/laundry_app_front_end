@@ -101,6 +101,7 @@ export const Input = styled(globalStyles.Input)`
   border: 1px solid black;
   padding: 1vh;
   box-shadow: 3px 3px 3px;
+  font-size: 16px;
   &:focus {
     border: 1px solid black;
     outline: none;

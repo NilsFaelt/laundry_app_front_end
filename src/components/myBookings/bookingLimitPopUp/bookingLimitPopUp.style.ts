@@ -49,7 +49,9 @@ export const BtnDiv = styled.div`
   gap: 4vw;
 `;
 
-export const Input = styled.input``;
+export const Input = styled.input`
+  font-size: 16px;
+`;
 export const Close = styled(Delete)`
   position: absolute;
   top: 3px;

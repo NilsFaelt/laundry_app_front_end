@@ -88,6 +88,7 @@ export const Input = styled.input`
   border-radius: 5px;
   height: 30px;
   width: 250px;
+  font-size: 16px;
 `;
 export const Btn = styled(MainBtn)`
   margin-top: 10px;

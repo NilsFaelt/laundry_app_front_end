@@ -91,7 +91,7 @@ export const Input = styled(globalStyles.Input)`
   border-radius: 0px;
   box-shadow: 0px;
   margin-right: 10px;
-  font-size: 14px;
+  font-size: 16px;
   font-family: italic;
   width: 100%;
   &:focus {
@@ -182,6 +182,7 @@ export const TextArea = styled.textarea`
   border: 1px solid black;
   margin-bottom: 20px;
   margin-top: 20px;
+  font-size: 16px;
   border: none;
   &:focus {
     outline: none;
