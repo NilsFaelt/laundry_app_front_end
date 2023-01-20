@@ -25,6 +25,10 @@ export const Container = styled.div<Props>`
   @keyframes containerAni {
     0% {
     }
+    80% {
+      width: 300px;
+      height: 300px;
+    }
     100% {
       top: 50%;
       right: 50%;
