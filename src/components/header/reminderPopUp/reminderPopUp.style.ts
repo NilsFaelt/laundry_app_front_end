@@ -30,9 +30,6 @@ export const Container = styled.div<Props>`
       height: 300px;
     }
     100% {
-      top: 50%;
-      right: 50%;
-      transform: translate(50%, 50%);
       width: 300px;
       height: 300px;
       opacity: 1;
