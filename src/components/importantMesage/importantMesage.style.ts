@@ -17,6 +17,7 @@ export const TextArea = styled.textarea`
   width: 90%;
   height: 300px;
   border-radius: 5px;
+  font-size: 16px;
 `;
 
 export const Remove = styled.p`

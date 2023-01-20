@@ -44,7 +44,10 @@ animation-fill-mode: forwards;
 @keyframes close-animation-nav {
     0% {opacity:1;}
     30%{opacity:0;}
-    100% {opacity:0;}
+    100% {
+    opacity:0;
+    width:0px;
+    }
    }
  
    }
@@ -73,7 +76,7 @@ z-index:5;
          width: 0vw;}
 
     100% { max-height:auto;
-        width:clamp(300px, 30vw, 300px)
+        width:clamp(300px, 30vw, 300px);
         box-shadow:10px 10px 10px grey;
         padding:5px;
         z-index-3;
@@ -82,7 +85,12 @@ z-index:5;
 @keyframes close-animation {
     0% { height:50vh;
         width:clamp(300px, 30vw, 500px); }
-    100% { height: 0vh;
+        90%{
+          right:0px;
+        }
+    100% {
+       height: 0vh;
+        right:120px;
          width: 0vw;
          padding:0px;
         }

@@ -6,4 +6,5 @@ export const Container = styles(glolbalStyles.FlexedContainerCollumn)`
 height:auto;
 width:auto;
 background-image:url(${laundryImg});
+
 `;
