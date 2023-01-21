@@ -68,6 +68,7 @@ const Quiz = () => {
       setPreventCheat(true);
     } else setPreventCheat(true);
   };
+
   return (
     <BackgroundContainer>
       <Container>
@@ -86,6 +87,7 @@ const Quiz = () => {
             {trivia?.correct_answer}
           </styles.Title>
         ) : null}
+        <styles.P>{trivia?.question.replace(/&quot;/g, "")}</styles.P>
         <styles.P>{trivia?.question}</styles.P>
         {trivia?.type === "boolean" && (
           <BtnDiv style={{ marginBottom: "30px" }}>
