@@ -88,7 +88,6 @@ const Quiz = () => {
           </styles.Title>
         ) : null}
         <styles.P>{trivia?.question.replace(/&quot;/g, "")}</styles.P>
-        <styles.P>{trivia?.question}</styles.P>
         {trivia?.type === "boolean" && (
           <BtnDiv style={{ marginBottom: "30px" }}>
             <MainBtn onClick={() => handleClickTrue()}>True</MainBtn>
