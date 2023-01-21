@@ -23,11 +23,15 @@ const ThreadsContainer = ({
 }: Props) => {
   const [page, setPage] = useState(1);
   const [pagePerSide, setPagePerSide] = useState(3);
-  const paginatedArray = getPaginationInfo(filteredThreads, page, pagePerSide);
-
+  const paginatedArray = getPaginationInfo(
+    filteredThreads.reverse(),
+    page,
+    pagePerSide
+  );
   useEffect(() => {
     setPage(1);
   }, [inputSearch]);
+  console.log(filteredThreads.reverse());
 
   return (
     <styles.TreadsAndPoststContainer>
