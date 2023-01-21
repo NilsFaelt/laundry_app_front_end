@@ -47,6 +47,7 @@ animation-fill-mode: forwards;
     100% {
     opacity:0;
     width:0px;
+    pointer-events:none;
     }
    }
  
