@@ -90,7 +90,7 @@ const Quiz = () => {
           </styles.Title>
         ) : null}
         <styles.P>
-          {trivia?.question.replace(/&#039;|&quot;|&eacute;|&aacute;/g, "")}
+          {trivia?.question.replace(/&#039;|&quot;|&eacute;|&aacute;|/g, "")}
         </styles.P>
 
         {trivia?.type === "boolean" && (

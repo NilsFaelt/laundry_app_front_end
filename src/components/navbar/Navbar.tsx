@@ -8,7 +8,10 @@ import {
   activateChat,
 } from "../../redux/menuSlice";
 
-const Navbar = () => {
+interface Props {
+  setToogleMailPopUp: React.Dispatch<React.SetStateAction<boolean>>;
+}
+const Navbar = ({ setToogleMailPopUp }: Props) => {
   const { calendar, bookings, chat } = useSelector(
     (state: RootState) => state.showActiveMenuReducer
   );
@@ -20,7 +23,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
 
   return (
-    <styles.Container>
+    <styles.Container onClick={() => setToogleMailPopUp(false)}>
       <styles.Link to={"/calendar"}>
         <styles.Calendar
           onClick={() => dispatch(activateCalendar())}

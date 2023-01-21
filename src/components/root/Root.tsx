@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Outlet, useNavigate } from "react-router-dom";
 import { getAllRooms } from "../../api/getAllRooms";
@@ -13,6 +13,7 @@ import * as styles from "./root.styles";
 import { typeCheckUser } from "./utils/typeCheckUser";
 
 const Root = () => {
+  const [toogleMailPopUp, setToogleMailPopUp] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state: RootState) => state.userReducer.user);
@@ -37,9 +38,14 @@ const Root = () => {
   return (
     <styles.Container>
       <Head />
-      {user ? <Header /> : null}
+      {user ? (
+        <Header
+          toogleMailPopUp={toogleMailPopUp}
+          setToogleMailPopUp={setToogleMailPopUp}
+        />
+      ) : null}
       {user ? <Outlet /> : <Login />}
-      {user ? <Navbar /> : null}
+      {user ? <Navbar setToogleMailPopUp={setToogleMailPopUp} /> : null}
     </styles.Container>
   );
 };

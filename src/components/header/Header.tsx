@@ -9,9 +9,11 @@ import { getReminder } from "../../api/getReminder";
 import { Ireminder } from "../../types/reminderTypes";
 import ReminderPopUp from "./reminderPopUp/ReminderPopUp";
 import { shortenDateToString } from "../../utils/shortenDateToString";
-
-const Header = () => {
-  const [toogleMailPopUp, setToogleMailPopUp] = useState(false);
+interface Props {
+  toogleMailPopUp: boolean;
+  setToogleMailPopUp: React.Dispatch<React.SetStateAction<boolean>>;
+}
+const Header = ({ toogleMailPopUp, setToogleMailPopUp }: Props) => {
   const [reminder, setReminder] = useState<Ireminder | null>(null);
   const readAbleDate = shortenDateToString(new Date());
   const { userMenu } = useSelector(
