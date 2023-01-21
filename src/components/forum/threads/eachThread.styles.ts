@@ -21,14 +21,13 @@ cursor:pointer;
 &:hover{
     transition:0.2s;
     background-color:${colors.primary};
-    text-decoration:underline 1px solid   ${colors.activePositive};
     outline:1px solid white;
   }
   &:active{
     transition:0.2s;
     background-color:${colors.primary};
     box-shadow:0px 0px 0px  white;
-    text-decoration:underline 1px solid   ${colors.activePositive};
+    
   
   }
 `;
