@@ -97,7 +97,10 @@ const Posts = ({ setChoosenThread, thread, setactivateFetchPosts }: Props) => {
   return (
     <styles.Container>
       {user?.admin ? (
-        <styles.HamBurger onClick={() => toogleMenuOnClick()} />
+        <styles.HamBurger
+          cursorEvent={toogleMenu ? "none" : "pointer"}
+          onClick={() => toogleMenuOnClick()}
+        />
       ) : null}
       {toogleMenu ? (
         <styles.UserMenu ref={menuRef}>
