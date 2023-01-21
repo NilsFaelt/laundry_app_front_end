@@ -41,7 +41,7 @@ const Header = () => {
         <styles.UserDark></styles.UserDark>
       )}
 
-      <DropDownUserMenu />
+      <DropDownUserMenu setToogleMailPopUp={setToogleMailPopUp} />
       {toogleMailPopUp ? (
         <MailPopUp setToogleMailPopUp={setToogleMailPopUp} />
       ) : null}

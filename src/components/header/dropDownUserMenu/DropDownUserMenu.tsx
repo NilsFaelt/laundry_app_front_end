@@ -5,8 +5,10 @@ import { useRef } from "react";
 import { useClickOustsideToClose } from "../../../hooks/useClickOustsideToClose";
 import { loggOutUser } from "../../../redux/userSlice";
 import { activateBooking, handelDropDownClick } from "../../../redux/menuSlice";
-
-const DropDownUserMenu = () => {
+interface Props {
+  setToogleMailPopUp: React.Dispatch<React.SetStateAction<boolean>>;
+}
+const DropDownUserMenu = ({ setToogleMailPopUp }: Props) => {
   const user = useSelector((state: RootState) => state.userReducer.user);
   let admin = false;
   if (typeof user?.admin === "boolean") admin = user?.admin;
@@ -31,6 +33,7 @@ const DropDownUserMenu = () => {
     <>
       {firstTooglge ? (
         <styles.UserMenu
+          onClick={() => setToogleMailPopUp(false)}
           ref={menuRef}
           animation={userMenu ? "open-animation" : "close-animation"}
         >
