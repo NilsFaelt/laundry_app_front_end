@@ -78,7 +78,7 @@ z-index:5;
 
     100% { max-height:auto;
         width:clamp(300px, 30vw, 300px);
-        box-shadow:10px 10px 10px grey;
+        box-shadow:10px 10px 10px black;
         padding:5px;
         z-index-3;
         ; }
