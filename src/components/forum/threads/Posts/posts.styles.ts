@@ -12,7 +12,7 @@ interface NavProps {
   animation: string;
 }
 interface Burger {
-  cursorEvent: string;
+  cursorevent: string;
 }
 
 export const Container = styled(globalStyles.FlexedContainerCollumn)`
@@ -176,7 +176,7 @@ export const HamBurger = styled(AiOutlineMenu)<Burger>`
   position: absolute;
   transform: scale(1.5);
   z-index: 3;
-  pointer-events: ${(props) => props.cursorEvent};
+  pointer-events: ${(props) => props.cursorevent};
   &:hover {
     cursor: pointer;
     color: ${colors.hover};

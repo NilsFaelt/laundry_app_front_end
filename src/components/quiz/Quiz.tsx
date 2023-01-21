@@ -25,6 +25,8 @@ const Quiz = () => {
     }
   }, [trivia]);
 
+  console.log("\uD83D\uDC04");
+
   const handleClickTrue = () => {
     setBooleanAnswer(true);
     if (trivia?.correct_answer === "True" && preventCheat === false) {
