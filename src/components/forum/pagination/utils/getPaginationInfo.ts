@@ -15,5 +15,7 @@ export const getPaginationInfo = (
   const pages = threads.length / perPage;
   const roundedPage = Math.ceil(pages);
   const slicedArray = threads?.slice(firstIndex, lastIndex);
+  console.log(slicedArray);
+
   return { lastIndex, firstIndex, roundedPage, slicedArray };
 };

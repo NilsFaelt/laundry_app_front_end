@@ -52,7 +52,6 @@ const AddThreadPopUp: React.FC<Props> = ({
         <Styles.Input
           maxLength={10}
           placeholder='ThreadName'
-          value={threadName}
           required
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setThreadName(e.target.value)

@@ -40,20 +40,24 @@ export const Container = styled.div<Props>`
 `;
 export const TextContainer = styled.div<Props>`
   opacity: 0;
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   word-wrap: break-word;
   overflow: scroll;
   animation: ${(props) => (props.toogleBigMessage ? "textAni" : "")} 1s forwards;
   @keyframes textAni {
     0% {
       opacity: 0;
+      width: 0px;
+      height: 0px;
     }
     90% {
       opacity: 0;
     }
     100% {
       opacity: 1;
+      width: 300px;
+      height: 300px;
     }
   }
 `;
