@@ -4,7 +4,7 @@ A system fro booking laundry, intern email, forum and so on,  built as my final 
 
 <span style="color:red">
 Important! 
-</style>
+</span>
 
 ## To run 
 The lazy way 
