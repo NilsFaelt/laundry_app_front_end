@@ -2,7 +2,8 @@
 
 A system fro booking laundry, intern email, forum and so on,  built as my final project in school. 
 
-<span style="color:red">Important!</span>
+### Important !
+Since the server running on a free tier, there will be a 30s start up time, so when you get a message warning that ypu couldnt loggin, just wait 30s and try again.
 
 ## To run 
 The lazy way 
