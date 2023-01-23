@@ -25,6 +25,9 @@ export const handleLogin: HandleLogin = async (
       dispatch(loginUser(user));
       setsShowLoginFailed(false);
     }
+    if (!user) {
+      setsShowLoginFailed(true);
+    }
     setsShowLoginFailed(true);
   } catch (err) {
     setsShowLoginFailed(true);
