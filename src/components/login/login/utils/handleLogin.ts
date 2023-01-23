@@ -20,7 +20,7 @@ export const handleLogin: HandleLogin = async (
 
     const jsonUser = JSON.stringify(user);
     localStorage.setItem("user", jsonUser);
-    console.log(user);
+
     if (user) {
       dispatch(loginUser(user));
       setsShowLoginFailed(false);
