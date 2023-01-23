@@ -2,9 +2,7 @@
 
 A system fro booking laundry, intern email, forum and so on,  built as my final project in school. 
 
-<span style="color:red">
-Important! 
-</span>
+<span style="color:red">Important!</span>
 
 ## To run 
 The lazy way 
