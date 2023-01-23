@@ -10,7 +10,7 @@ Otherwise:
 * Git clone project to folder of choice
 * run cmd: npm i || yarn i 
 * start: npm start
-Since th server running on a free tier, there will be a 30s delay before it starts running, dont give up hope.
+* Since th server running on a free tier, there will be a 30s delay before it starts running, dont give up hope.
 ### Loggin 
 * laundry@app.gmail.com
 * laundry123
