@@ -36,9 +36,9 @@ const MyBookings = () => {
     bookedTimes = useGetTimeByUser(user?.email, rerenderBookings);
     setTimeout(() => {
       if (bookedTimes?.data) dispacth(addAllLaundryTimes(bookedTimes.data));
-    }, 10);
+    }, 50);
   }
-
+  console.log(bookedTimes, rerenderBookings);
   deleteOutdatedBooking(bookedTimes);
   const backToCalendarOnClick = () => {
     dispacth(activateCalendar());

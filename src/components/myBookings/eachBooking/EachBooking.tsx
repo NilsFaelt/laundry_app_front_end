@@ -28,10 +28,10 @@ const EachBooking: React.FC<Props> = ({
     deleteBookTimeById(info._id);
     setTimeout(() => {
       setRerenderBookings(!rerenderBookings);
-    }, 50);
+    }, 150);
   };
   const readabelDate = makeDateReadeable(info.dateForBooking);
-  console.log(bookingId, info._id);
+
   return (
     <styles.container
       onClick={() => setBookingId(info._id)}
