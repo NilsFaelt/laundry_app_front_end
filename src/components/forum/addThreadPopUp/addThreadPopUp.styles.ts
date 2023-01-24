@@ -14,7 +14,7 @@ export const container = styled(globalStyles.FlexedContainerCollumn)`
   border-radius: 5px;
   box-shadow: 3px 3px 3px;
   z-index: 1;
-  border: 1px solid white;
+  border: 1px solid black;
 `;
 export const title = styled(globalStyles.ThhirdTitle)`
   color: white;
@@ -34,7 +34,7 @@ export const Form = styled.form`
 export const Label = styled(globalStyles.Label)`
   font-size: 15px;
   margin-top: 10px;
-  color: ${colors.white};
+  color: ${colors.showActiveLink};
 `;
 export const Warning = styled(globalStyles.Label)`
   font-size: 15px;
@@ -43,16 +43,14 @@ export const Warning = styled(globalStyles.Label)`
 `;
 export const Input = styled(globalStyles.Input)`
   width: 100%;
+  font-family: Verdana;
 `;
 
 export const Close = styled(AiFillCloseCircle)`
   position: absolute;
-  left: 20px;
-  top: 3vh;
+  left: 0px;
+  top: 0;
   color: white;
   transform: scale(2.5);
   cursor: pointer;
-  &:hover {
-    color: ${colors.danger};
-  }
 `;
