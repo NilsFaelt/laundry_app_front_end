@@ -23,7 +23,7 @@ export const container = styled.div<ContainerProps>`
     100% {
       box-shadow: 30px 30px 30px;
       transform: scale(1.1);
-      z-index: 3;
+      z-index: 2;
     }
   }
 `;
