@@ -2,10 +2,8 @@ import styled from "styled-components";
 import { colors } from "../../../styles/colors";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { BsAlarm } from "react-icons/bs";
-interface ContainerProps {
-  zoomInBooking: string;
-}
-export const container = styled.div<ContainerProps>`
+
+export const container = styled.div`
   position: relative;
   border: 1px solid white;
   border-radius: 5px;
