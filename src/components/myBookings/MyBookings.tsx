@@ -68,8 +68,6 @@ const MyBookings = () => {
         {bookedTimes?.loading ? <Spinner /> : null}
         {bookedTimes?.data?.map((each: BookedLaundrytimes) => (
           <EachBooking
-            bookingId={bookingId}
-            setBookingId={setBookingId}
             key={each._id}
             info={each}
             setRerenderBookings={setRerenderBookings}
