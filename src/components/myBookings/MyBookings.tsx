@@ -21,6 +21,7 @@ interface Data {
 
 const MyBookings = () => {
   const dispacth = useDispatch();
+  const [bookingId, setBookingId] = useState<null | string>(null);
   const [toogleBookingLimit, setToogleBookingLimit] = useState(false);
   const [rerenderBookings, setRerenderBookings] = useState<boolean>(false);
   const user: UserTypeWithNestedAdress | null = useSelector(
@@ -29,6 +30,7 @@ const MyBookings = () => {
   const bookingLimit = useSelector(
     (state: RootState) => state.settingsReducer.bookingLimit
   );
+  console.log(bookingId);
 
   let bookedTimes: Data | null = null;
   if (user?.email) {
@@ -66,6 +68,8 @@ const MyBookings = () => {
         {bookedTimes?.loading ? <Spinner /> : null}
         {bookedTimes?.data?.map((each: BookedLaundrytimes) => (
           <EachBooking
+            bookingId={bookingId}
+            setBookingId={setBookingId}
             key={each._id}
             info={each}
             setRerenderBookings={setRerenderBookings}

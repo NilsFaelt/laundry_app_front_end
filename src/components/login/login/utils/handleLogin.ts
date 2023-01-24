@@ -17,7 +17,6 @@ export const handleLogin: HandleLogin = async (
   try {
     e.preventDefault();
     const user = await login(loginInfo);
-
     const jsonUser = JSON.stringify(user);
     localStorage.setItem("user", jsonUser);
 
