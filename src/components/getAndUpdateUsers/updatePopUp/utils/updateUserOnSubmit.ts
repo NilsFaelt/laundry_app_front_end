@@ -7,9 +7,12 @@ export const updateUserOnSubmit = async (
   setUserWereUpdated: React.Dispatch<React.SetStateAction<boolean>>
 ) => {
   e.preventDefault();
+  if (createUserInfo.email === "admin@gmail.com") {
+    alert("Glöm de");
+    return;
+  }
   const newStructure = await changeUserStructubforebeforeSend(createUserInfo);
   const updatedUser = await updateUser(newStructure);
-  console.log(updatedUser, "upd useer");
   if (updatedUser?.adress) setUserWereUpdated(true);
 };
 
