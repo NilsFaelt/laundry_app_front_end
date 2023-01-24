@@ -27,5 +27,5 @@ export const loopThruLaundryTimes = async (
         }
       });
     }
-  }, 100);
+  }, 80);
 };

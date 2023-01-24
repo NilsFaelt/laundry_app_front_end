@@ -17,7 +17,6 @@ export const Container = styled(globalStyles.FlexedContainerCollumn)`
   margin: 0 auto;
   margin-top: 20vh;
   width: clamp(300px, 50%, 500px);
-  height: auto;
   background-color: ${colors.primary};
   padding: calc(20px + 2vw);
   border-radius: 5px;

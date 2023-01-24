@@ -28,7 +28,7 @@ const ShowAvilibleTimes: React.FC<ShowAvailibleTimesProps> = ({
   useEffect(() => {
     fetchWrapper(user, setusersBookedLimit);
   }, []);
-  console.log(bookedTime.availible);
+
   return (
     <styles.container
       onClick={() => handleBookTimeClick(bookedTime)}

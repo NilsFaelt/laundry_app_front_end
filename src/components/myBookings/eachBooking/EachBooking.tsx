@@ -34,7 +34,7 @@ const EachBooking: React.FC<Props> = ({
 
   return (
     <styles.container
-      onClick={() => setBookingId(info._id)}
+      onClick={() => setBookingId(info._id === bookingId ? null : info?._id)}
       zoomInBooking={bookingId === info._id ? "ani" : ""}
     >
       {toogleAlarm ? <AlarmPopUp setToolgeAlarm={setToolgeAlarm} /> : null}

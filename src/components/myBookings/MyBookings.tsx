@@ -34,7 +34,6 @@ const MyBookings = () => {
   let bookedTimes: Data | null = null;
   if (user?.email) {
     bookedTimes = useGetTimeByUser(user?.email, rerenderBookings);
-    console.log(bookedTimes);
     setTimeout(() => {
       if (bookedTimes?.data) dispacth(addAllLaundryTimes(bookedTimes.data));
     }, 50);
