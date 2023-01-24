@@ -15,15 +15,17 @@ export const container = styled.div<ContainerProps>`
   padding-bottom: 4vh;
   background-color: black;
   box-shadow: 3px 3px 3px;
-  animation: ${(props) => props.zoomInBooking} 2s forwards;
-  @keyframes ani {
-    0% {
-      box-shadow: 3px 3px 3px;
-    }
-    100% {
-      box-shadow: 30px 30px 30px;
-      transform: scale(1.1);
-      z-index: 2;
+  @media screen and (max-width: 450px) {
+    animation: ${(props) => props.zoomInBooking} 1s forwards;
+    @keyframes ani {
+      0% {
+        box-shadow: 3px 3px 3px;
+      }
+      100% {
+        box-shadow: 30px 30px 30px;
+        transform: scale(1.1);
+        z-index: 2;
+      }
     }
   }
 `;
