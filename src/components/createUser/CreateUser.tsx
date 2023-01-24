@@ -133,6 +133,7 @@ export const CreateUser = () => {
         ) : (
           <styles.P>Not Admin</styles.P>
         )}
+        {userExsists ? <styles.P>User already exsists</styles.P> : null}
         <styles.BtnDiv>
           <styles.PstvBtn type='button' onClick={() => setAdmin(true)}>
             Admin
