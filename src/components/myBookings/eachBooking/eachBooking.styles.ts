@@ -14,7 +14,6 @@ export const container = styled.div`
   background-color: black;
   box-shadow: 3px 3px 3px;
   &:active {
-    transition: 1s;
     box-shadow: 30px 30px 30px;
     transform: scale(1.3);
     z-index: 3;
