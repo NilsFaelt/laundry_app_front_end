@@ -11,12 +11,16 @@ interface Props {
   info: BookedLaundrytimes;
   setRerenderBookings: React.Dispatch<React.SetStateAction<boolean>>;
   rerenderBookings: boolean;
+  setBookingId: React.Dispatch<React.SetStateAction<null | string>>;
+  bookingId: null | string;
 }
 
 const EachBooking: React.FC<Props> = ({
   info,
   setRerenderBookings,
   rerenderBookings,
+  setBookingId,
+  bookingId,
 }) => {
   const [toogleAlarm, setToolgeAlarm] = useState(false);
   const time = fixBookingHoursToMoreReadble(info);
@@ -27,9 +31,12 @@ const EachBooking: React.FC<Props> = ({
     }, 50);
   };
   const readabelDate = makeDateReadeable(info.dateForBooking);
-
+  console.log(bookingId, info._id);
   return (
-    <styles.container>
+    <styles.container
+      onClick={() => setBookingId(info._id)}
+      zoomInBooking={bookingId === info._id ? "ani" : ""}
+    >
       {toogleAlarm ? <AlarmPopUp setToolgeAlarm={setToolgeAlarm} /> : null}
       <styles.Delete onClick={() => deleteOnClick(info)}></styles.Delete>
       <styles.TitleTop>

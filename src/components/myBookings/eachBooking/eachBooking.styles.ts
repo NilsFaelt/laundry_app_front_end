@@ -2,8 +2,10 @@ import styled from "styled-components";
 import { colors } from "../../../styles/colors";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { BsAlarm } from "react-icons/bs";
-
-export const container = styled.div`
+interface ContainerProps {
+  zoomInBooking: string;
+}
+export const container = styled.div<ContainerProps>`
   position: relative;
   border: 1px solid white;
   border-radius: 5px;
@@ -13,10 +15,16 @@ export const container = styled.div`
   padding-bottom: 4vh;
   background-color: black;
   box-shadow: 3px 3px 3px;
-  &:active {
-    box-shadow: 30px 30px 30px;
-    transform: scale(1.3);
-    z-index: 3;
+  animation: ${(props) => props.zoomInBooking} 2s forwards;
+  @keyframes ani {
+    0% {
+      box-shadow: 3px 3px 3px;
+    }
+    100% {
+      box-shadow: 30px 30px 30px;
+      transform: scale(1.1);
+      z-index: 3;
+    }
   }
 `;
 
