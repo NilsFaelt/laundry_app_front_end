@@ -15,6 +15,7 @@ export const BackgroundContainer = styled.div`
 export const Container = styled(globalStyles.FlexedContainerCollumn)`
   position: relative;
   margin: 0 auto;
+  height: auto;
   margin-top: 20vh;
   width: clamp(300px, 50%, 500px);
   background-color: ${colors.primary};

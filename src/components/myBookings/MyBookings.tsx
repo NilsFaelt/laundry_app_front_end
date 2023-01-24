@@ -63,7 +63,7 @@ const MyBookings = () => {
             Change Booking Limit?
           </styles.ChooseTitle>
         )}
-        {bookedTimes?.loading ? <Spinner /> : null}
+        {bookedTimes?.loading && !bookedTimes?.data ? <Spinner /> : null}
         {bookedTimes?.data?.map((each: BookedLaundrytimes) => (
           <EachBooking
             bookingId={bookingId}
