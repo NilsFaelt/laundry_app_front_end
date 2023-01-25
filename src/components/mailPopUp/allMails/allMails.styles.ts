@@ -9,3 +9,6 @@ export const AllMailsContainer = styled.div`
   overflow: scroll;
   padding: 5px;
 `;
+export const P = styled.p`
+  color: black;
+`;

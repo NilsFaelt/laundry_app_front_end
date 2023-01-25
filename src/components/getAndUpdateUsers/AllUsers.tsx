@@ -37,11 +37,12 @@ const AllUsers = () => {
         <UpdatePopUp setChoosenUser={setChoosenUser} user={choosenUser} />
       ) : null}
       <styles.UserContainer>
-        {/* <styles.Refresh onClick={refresh}></styles.Refresh> */}
         <styles.Label>Search User</styles.Label>
+        {userData.error && <styles.Label>Couldnt fetch User</styles.Label>}
         {userData.error?.message && !userData.data ? (
           <styles.Error>{userData.error?.message}</styles.Error>
         ) : null}
+
         <styles.Input
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setInput(e.target.value.toLocaleLowerCase())

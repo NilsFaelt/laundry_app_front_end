@@ -15,15 +15,19 @@ interface Props {
 const AllMails = ({ setChoosenMail, choosenMail }: Props) => {
   const [page, setPage] = useState(1);
   const [perPage, setPerPage] = useState(7);
-
+  const [loadingMails, setloadingMails] = useState(false);
   const [allMails, setAllMails] = useState<MailType[]>([]);
   const user = useSelector((state: RootState) => state.userReducer.user);
   const fetchWrapper = async () => {
+    setloadingMails(true);
     if (typeof user?.email === "string") {
       const data = await getAllMails(user?.email);
+      console.log(data, "mailsss");
       const reversedArray = data.data.mails.reverse();
       setAllMails(reversedArray);
+      setloadingMails(false);
     }
+    setloadingMails(false);
   };
 
   const paginatedArray = getPaginationInfo(allMails, page, perPage);
@@ -34,6 +38,7 @@ const AllMails = ({ setChoosenMail, choosenMail }: Props) => {
   return (
     <>
       <styles.AllMailsContainer>
+        {loadingMails && <styles.P>Loading Mails...</styles.P>}
         {paginatedArray.slicedArray?.map((mail) => {
           return (
             <EachMail
