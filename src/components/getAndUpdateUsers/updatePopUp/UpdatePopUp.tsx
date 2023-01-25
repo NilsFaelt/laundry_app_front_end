@@ -81,15 +81,21 @@ const UpdatePopUp: React.FC<UpdateUserProps> = ({ user, setChoosenUser }) => {
           placeholder='LastName'
           value={createUserInfo.lastName}
         ></styles.Input>
-        <styles.Lable>Email</styles.Lable>
-        <styles.Input
-          required={true}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e)}
-          name='email'
-          placeholder='Email'
-          type='email'
-          value={createUserInfo.email}
-        ></styles.Input>
+        {user.email !== "admin@gmail.com" && (
+          <>
+            <styles.Lable>Email</styles.Lable>
+            <styles.Input
+              required={true}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                handleChange(e)
+              }
+              name='email'
+              placeholder='Email'
+              type='email'
+              value={createUserInfo.email}
+            ></styles.Input>
+          </>
+        )}
         <styles.Lable>Brf</styles.Lable>
         <styles.Input
           required={true}
