@@ -8,6 +8,7 @@ import { handleLogin } from "./utils/handleLogin";
 
 const Login = () => {
   const [showLoginFailed, setsShowLoginFailed] = useState(false);
+  const [tryingLogin, setTryingLogin] = useState(false);
   const user = useSelector((state: RootState) => state.userReducer);
   const dispatch = useDispatch();
   const [loginInfo, setLoginInfo] = useState<LoginInfo>({
@@ -19,12 +20,21 @@ const Login = () => {
     <styles.BackgroundContainer>
       <styles.Container>
         <styles.Title>Login</styles.Title>
+        {!showLoginFailed && tryingLogin && (
+          <styles.PLogin>Logging in...</styles.PLogin>
+        )}
         {showLoginFailed ? (
           <styles.P>Make sure credentials are correct</styles.P>
         ) : null}
         <styles.Form
           onSubmit={(e) =>
-            handleLogin(e, loginInfo, setsShowLoginFailed, dispatch)
+            handleLogin(
+              e,
+              loginInfo,
+              setsShowLoginFailed,
+              dispatch,
+              setTryingLogin
+            )
           }
         >
           <styles.Input

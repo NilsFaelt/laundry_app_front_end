@@ -34,7 +34,6 @@ const UpdatePopUp: React.FC<UpdateUserProps> = ({ user, setChoosenUser }) => {
   const deleteUserOnClick = async () => {
     if (user._id) {
       const response = await deleteUser(user._id);
-      console.log(response?.status);
       if (response?.status === 200) {
         setChoosenUser(null);
       }

@@ -45,6 +45,10 @@ export const P = styles.p`
 color:${colors.danger};
 font.size:12px;
 `;
+export const PLogin = styles.p`
+color:${colors.white};
+font.size:12px;
+`;
 
 export const Btn = styles(globalStyles.MainBtn)`
 margin-top:10px;
