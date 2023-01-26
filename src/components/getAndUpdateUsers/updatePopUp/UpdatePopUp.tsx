@@ -44,9 +44,15 @@ const UpdatePopUp: React.FC<UpdateUserProps> = ({ user, setChoosenUser }) => {
     <styles.Container>
       <styles.Close onClick={() => setChoosenUser(null)}></styles.Close>
       <styles.Title>Update User</styles.Title>
-      <styles.Pdel onClick={() => setshowDeleteBtns(true)}>
-        Delete User ?
-      </styles.Pdel>
+      {user.email !== "admin@gmail.com" ? (
+        <styles.Pdel onClick={() => setshowDeleteBtns(true)}>
+          Delete User ?
+        </styles.Pdel>
+      ) : (
+        <styles.Pdel style={{ pointerEvents: "none" }}>
+          Not Deleteable{" "}
+        </styles.Pdel>
+      )}
       {showDeleteBtns ? (
         <>
           <styles.BtnDiv>
